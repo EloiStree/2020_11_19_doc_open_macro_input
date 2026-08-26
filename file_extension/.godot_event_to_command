@@ -1,0 +1,12 @@
+
+
+```
+
+FILE>>>|.godot_event_to_command
+at_ready ♦️ cmd:log at_ready
+at_focus_enter ♦️ cmd:log at_focus_enter
+at_focus_exit ♦️ cmd:log at_focus_exit
+at_exit ♦️ cmd:log at_exit
+
+
+```
