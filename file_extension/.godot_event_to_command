@@ -1,12 +1,23 @@
+Ce fichier permet d’ajouter des commandes à déclencher lors d’événements Godot.   
+Il pourrait y en avoir d’autres dans le futur, mais les quatre principaux sont `at_ready`, `at_focus_enter`, `at_focus_exit` et `at_exit`.    
 
 
-```
-
+```text
 FILE>>>|.godot_event_to_command
 at_ready ♦️ cmd:log at_ready
 at_focus_enter ♦️ cmd:log at_focus_enter
 at_focus_exit ♦️ cmd:log at_focus_exit
 at_exit ♦️ cmd:log at_exit
-
-
 ```
+
+- `at_ready` La commande sera chargée dans GOMI au `_ready()` de Godot, c'est-à-dire lorsque la scène est chargée et importée dans la scène.
+- `at_focus_enter` Déclenche les commandes lorsque l'utilisateur revient dans GOMI depuis une autre application.
+- `at_focus_exit` Déclenche les commandes lorsque l'utilisateur quitte GOMI pour aller sur une autre application.
+- `at_exit` Les commandes sont déclenchées lors d'un rechargement des scènes ou lorsque l'application quitte.
+ 
+Si cela est plus parlant, ou si vous devez lancer plusieurs commandes en même temps, vous pouvez utiliser ces formats de fichiers :   
+[.godot_event_to_command_at_ready](.godot_event_to_command_at_ready.md)
+[.godot_event_to_command_at_focus_enter](.godot_event_to_command_at_focus_enter.md)
+[.godot_event_to_command_at_focus_exit](.godot_event_to_command_at_focus_exit.md)
+[.godot_event_to_command_at_exit](.godot_event_to_command_at_exit.md)
+
