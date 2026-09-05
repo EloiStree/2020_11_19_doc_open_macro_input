@@ -1,3 +1,5 @@
+Download: [GOMI](https://github.com/EloiStree/GOMI/releases)
+
 # Open Macro Input Documentation
 Documentation, support, tutorial on how to use Open Macro Input
 
