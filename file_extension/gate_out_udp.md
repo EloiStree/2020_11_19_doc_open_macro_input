@@ -94,3 +94,36 @@ while True:
     data, addr = sock.recvfrom(65535)
     print(f"[{addr[0]}:{addr[1]}] {data.hex(' ')}")
 ```
+
+
+## Listen to bytes with a bit of info
+
+``` python
+import socket
+PORT = 3615
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.bind(("0.0.0.0", PORT))
+print(f"Listening for bytes on UDP port {PORT}...")
+while True:
+    data, addr = sock.recvfrom(65535)
+    print(f"\n[{addr[0]}:{addr[1]}]")
+    print(f"Received {len(data)} bytes")
+
+    # Raw bytes
+    print(f"HEX:         {data.hex(' ')}")
+
+    # Big endian
+    big_endian = int.from_bytes(data, byteorder="big")
+    print(f"BIG ENDIAN:  0x{big_endian:X}")
+    print(f"             {big_endian}")
+
+    # Little endian
+    little_endian = int.from_bytes(data, byteorder="little")
+    print(f"LITTLE END:  0x{little_endian:X}")
+    print(f"             {little_endian}")
+
+    # Binary, preserving exactly 8 bits per byte
+    binary = " ".join(f"{byte:08b}" for byte in data)
+    print(f"BINARY:      {binary}")
+```
+
