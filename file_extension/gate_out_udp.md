@@ -63,3 +63,34 @@ sc: 1000> ~healer|2031> # Then ask it to stop jumping after 1 second
 sc: 200> ~dps|1|1300>   # The DPS presses A on its Xbox controller (index 1)
 sc: 400> ~dps|1|2300>   # The DPS releases the A button after 200 ms
 ```
+
+----------
+
+# Experiment with it
+
+## Listen to text
+
+``` python
+import socket
+PORT = 3614
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.bind(("0.0.0.0", PORT))
+print(f"Listening for text on UDP port {PORT}...")
+while True:
+    data, addr = sock.recvfrom(65535)
+    text = data.decode("utf-8", errors="replace")
+    print(f"[{addr[0]}:{addr[1]}] {text}")
+```
+
+## Listen to bytes
+
+``` python
+import socket
+PORT = 3615
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.bind(("0.0.0.0", PORT))
+print(f"Listening for bytes on UDP port {PORT}...")
+while True:
+    data, addr = sock.recvfrom(65535)
+    print(f"[{addr[0]}:{addr[1]}] {data.hex(' ')}")
+```
