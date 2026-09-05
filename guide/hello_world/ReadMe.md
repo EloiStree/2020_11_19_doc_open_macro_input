@@ -9,6 +9,8 @@ Required:
 - A Window computer
 - Any controller (Xbox, Nes, Playstation)
 
+--------------------
+
 Step: "Hello World"
 - Install Firefox and create account on Hordes.io
 - Install Python and download S2W that inject input in Firefox
@@ -26,9 +28,17 @@ Step: "File Overview"
 - What are the basic file to use
 
 
+--------------------
 
+#  Step: "Hello World"
 
+-
 
+#  Step: "Move"
+
+-
+
+#  Step: "File Overview"
 
 
 ```.godot_event_to_command_at_ready
