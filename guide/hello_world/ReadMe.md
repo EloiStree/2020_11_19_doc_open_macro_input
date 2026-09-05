@@ -9,6 +9,9 @@ Required:
 - A Window computer
 - Any controller (Xbox, Nes, Playstation)
 
+Optional:
+- A second monitor.
+
 --------------------
 
 Step: "Hello World"
@@ -32,7 +35,30 @@ Step: "File Overview"
 
 #  Step: "Hello World"
 
--
+Our missions is to allows player to be able to play the https://hordes.io/ with a controller.
+
+For that we need a software that can read controller and a software that can simulate input.
+
+You can downlaod the two here:
+- GOMI: https://github.com/EloiStree/GOMI/releases
+- S2W: https://github.com/eloistree/s2w
+
+GOMI is the one you read input and have fun coding around.   
+S2W is a python code that allows to simulate input or inject them if the game architecture allows it.   
+
+Firefox is a browser that understand key injection on Window.
+Your can download it here:
+https://www.firefox.com/en-US/
+
+> 🤔 Why we need to inject key ?
+
+When you learn to code by playing game or learn to remap on the same computer.
+Being in the editor and in the game can be a bit tedious.
+
+So by injecting key, you can stay in your code while playing on your seconds screen.
+23
+
+
 
 #  Step: "Move"
 
